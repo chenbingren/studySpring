@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.model.dao.VueDataDAO">
+  <select id="findByType" resultType="com.example.demo.model.bean.VueData">
+    SELECT id, name, name as title, furl,furl as image, remark , price , num , link from vuedata where mytype = #{type}
+  </select>
+
+  <select id="findByPid" resultType="com.example.demo.model.bean.VueData">
+    SELECT id, name, name as title, furl,furl as image, remark , price , num , link from vuedata where pid = #{pid}
+  </select>
+</mapper>
